@@ -1,0 +1,8 @@
+.navlinks {
+    .headerlink {
+        text-decoration: none;
+        color: #EFEFEF;
+    }
+    width: 12vw;
+    justify-content: space-between;
+}

@@ -4,10 +4,11 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { NavLink } from "react-bootstrap";
 
+import "./header.css"
 
 const Header = () => {
     return(
-        <Navbar bg='dark' variant='dark'>
+        <Navbar bg="dark" variant="dark">
             <Container>
                 <Navbar.Brand href="/" classname="headertext">Little Lemon</Navbar.Brand>
                     <Nav classname="navlinks">
