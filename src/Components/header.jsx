@@ -3,14 +3,17 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { NavLink } from "react-bootstrap";
+import Logo from '../assets/Logo.svg';
 
 import "./header.scss"
 
 const Header = () => {
     return(
-        <Navbar bg="dark" variant="dark">
+        <Navbar className="navbar">
             <Container>
-                <Navbar.Brand href="/" classname="headertext">Little Lemon</Navbar.Brand>
+                <Navbar.Brand href="/" classname="logo">
+                    <img src={Logo} variant="monochrome" alt="" />
+                </Navbar.Brand>
                     <Nav classname="navlinks">
                         <NavLink>Home</NavLink>
                         <NavLink>About</NavLink>

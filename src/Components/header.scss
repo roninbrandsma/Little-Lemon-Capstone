@@ -1,3 +1,19 @@
+@import '../variables.scss';
+
+.navbar {
+    background-color: $yellow;
+}
+
+.headertext:hover {
+    color: blue !important;
+    transition: 350ms;
+}
+
+.headertext:active {
+    color: blue !important;
+}
+
+
 .navlinks {
     .headerlink {
         text-decoration: none;
