@@ -5,7 +5,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import { NavLink } from "react-bootstrap";
 import Logo from '../assets/Logo.svg';
 
-import "./header.scss"
+
+import "../Header/header.scss"
 
 const Header = () => {
     return(

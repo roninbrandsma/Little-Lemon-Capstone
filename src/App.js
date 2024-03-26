@@ -1,7 +1,7 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import Header from './Components/header';
+import Header from './Components/Header/header.jsx';
 
 function App() {
   return (
