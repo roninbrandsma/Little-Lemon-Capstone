@@ -13,10 +13,10 @@ const Header = () => {
         <Navbar className="navbar">
             <Container>
                 <Navbar.Brand href="/" classname="logo">
-                    <img src={Logo} variant="monochrome" alt="" />
+                    <img src={Logo} alt="" />
                 </Navbar.Brand>
                     <Nav classname="navlinks">
-                        <NavLink>Home</NavLink>
+                        <NavLink to="/">Home</NavLink>
                         <NavLink>About</NavLink>
                         <NavLink>Menu</NavLink>
                         <NavLink>Reservations</NavLink>
