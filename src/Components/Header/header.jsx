@@ -14,15 +14,14 @@ const Header = () => {
             <Container>
                 <Navbar.Brand href="/" classname="logo">
                     <img src={Logo} alt="" />
-                </Navbar.Brand>
                     <Nav classname="navlinks">
-                        <NavLink to="/">Home</NavLink>
                         <NavLink>About</NavLink>
                         <NavLink>Menu</NavLink>
                         <NavLink>Reservations</NavLink>
                         <NavLink>Order Online</NavLink>
                         <NavLink>Login</NavLink>
                     </Nav>
+                </Navbar.Brand>
             </Container>
         </Navbar>
     )
