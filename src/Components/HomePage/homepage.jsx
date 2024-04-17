@@ -1,17 +1,18 @@
-import Card from "react-bootstrap/Card";
-
-
+import { Image } from "react-bootstrap"
 
 const HomePage = () => {
     return(
         <>
-            <div className='heroSection'>
-                <div>
-                    <Card>asfasf</Card>
-                </div>
-                <div>
-                    <img src='../assets/1_ji5jV-KoRbEFScZQUPYyGg.png' alt='' />
-                </div>
+            <div className='heroSectionDiv'>
+                <h1>Little Lemon</h1>
+                <h5>Chicago</h5>
+                <p></p>
+                <button>Reserve a Table</button>
+                <Image className="heroImage"
+                    src="../assets/restaurant.jpg"
+                    width={300}
+                    height={300}
+                />
             </div>
         </>
     )

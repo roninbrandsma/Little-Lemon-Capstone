@@ -1,16 +1,16 @@
-@import '../../variables.scss';
+@import "../../variables.scss";
 
 .navbar {
-    background-color: $yellow;
+    background-color: $green;
 }
 
 .headertext:hover {
-    color: blue !important;
+    color: $yellow !important;
     transition: 350ms;
 }
 
 .headertext:active {
-    color: blue !important;
+    color: $yellow !important;
 }
 
 
@@ -21,4 +21,8 @@
     }
     width: 12vw;
     justify-content: space-between;
+}
+
+.NavContainer {
+    margin: 0vw;
 }

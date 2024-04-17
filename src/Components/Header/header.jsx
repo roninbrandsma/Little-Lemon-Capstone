@@ -2,29 +2,34 @@ import React from "react";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { NavLink } from "react-bootstrap";
-import Logo from '../assets/Logo.svg';
+import { NavLink } from 'react-router-dom';
+import { Image } from "react-bootstrap";
+
+import "./header.scss"
 
 
-import "../Header/header.scss"
 
 const Header = () => {
     return(
-        <Navbar className="navbar">
+        <>
+        <Navbar>
             <Container>
-                <Navbar.Brand href="/" classname="logo">
-                    <img src={Logo} alt="" />
-                    <Nav classname="navlinks">
-                        <NavLink>About</NavLink>
-                        <NavLink>Menu</NavLink>
-                        <NavLink>Reservations</NavLink>
-                        <NavLink>Order Online</NavLink>
-                        <NavLink>Login</NavLink>
-                    </Nav>
-                </Navbar.Brand>
+            <Navbar.Brand href="/" className="headertext">
+                <Image
+                    src="../assets/Logo.jpg"
+                    width={70}
+                    height={30}
+                />
+            </Navbar.Brand>
+                <Nav className="navlinks">
+                    <NavLink to="/portfolio" className="headertext headerlink" >Portfolio</NavLink>
+                    <NavLink to="/contact" className="headertext headerlink">Contact</NavLink>
+                </Nav>
             </Container>
         </Navbar>
+        </>
     )
+
 }
 
-export default Header;
+export default Header

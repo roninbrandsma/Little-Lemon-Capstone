@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+.heroSectionDiv {
+  background-color: #F4CE14 !important;
+}
+
+.heroImage {
+  justify-content: right;
+}
