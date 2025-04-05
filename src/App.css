@@ -1,12 +1,59 @@
 * {
     margin: 0;
     padding: 0;
-  }
-
-.heroSectionDiv {
-  background-color: #F4CE14 !important;
 }
 
-.heroImage {
-  justify-content: right;
+
+/* HERO SECTION */
+.heroSectionDiv {
+  width: 100vw;
+  padding-top: 5vw;
+  padding-bottom: 5vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  display: inline-block;
+}
+
+.heroPara {
+  display: inline-block;
+}
+
+.restImage {
+  width: 500px;
+  height: 300px;
+  float: right;
+}
+
+.heroContInfo {
+  height: 40vh;
+  width: 40vw !important;
+}
+
+.heroContImg {
+  height: 40vh;
+  width: 40vw !important;
+}
+
+.reserveBtn {
+  color: #495E57 !important;
+  background-color: #F4CE14 !important;
+  margin-top: 70px;
+}
+
+
+/* SPECIAL SECTION */
+.specialSectionDiv {
+  width: 100vw;
+  height: auto;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
+.specialSectionCol {
+  text-align: center;
+  height: auto;
+}
+
+.specialSectionCard {
+  height: 7vh;
 }
