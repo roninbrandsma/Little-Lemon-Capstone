@@ -7,8 +7,8 @@
 /* HERO SECTION */
 .heroSectionDiv {
   width: 100vw;
-  padding-top: 5vw;
-  padding-bottom: 5vw;
+  padding-top: 3vw;
+  padding-bottom: 3vw;
   padding-left: 2vw;
   padding-right: 2vw;
   display: inline-block;
@@ -47,13 +47,38 @@
   height: auto;
   padding-top: 2vh;
   padding-bottom: 2vh;
+  background-color: #F4CE14;
 }
 
 .specialSectionCol {
-  text-align: center;
-  height: auto;
+  height: fit-content;
 }
 
 .specialSectionCard {
-  height: 7vh;
+  width: 13vw;
+  height: 35vh !important;
+  background-color: #495E57 !important;
+  color: #F4CE14 !important;
+  text-shadow: 0 0 2px black;
+  border-radius: 15%;
+}
+
+.specialSectionCardTitle {
+  text-align: center;
+}
+
+.specialSectionCardImg {
+  height: 17vh;
+}
+
+.specialSectionCardText {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+/* Review Section */
+.reviewSection {
+  width: 100vw;
+  height: auto;
 }

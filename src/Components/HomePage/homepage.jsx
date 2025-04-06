@@ -1,4 +1,6 @@
-import { Container, Row, Col, Button, Card } from "react-bootstrap";
+import { Container, Row, Col, Button, Card, CardTitle, Carousel } from "react-bootstrap";
+import "../../assets/restaurant.jpg";
+import "../../assets/bruchetta.svg";
 
 
 const HomePage = () => {
@@ -24,24 +26,45 @@ const HomePage = () => {
                     <Row>
                         <Col className="specialSectionCol">
                             <Card className="specialSectionCard"  variant="light">
-                                <Card.Img src="../../assets/bruchetta.svg"/>
-                                <Card.Text></Card.Text>
+                                <Card.Img  className="specialSectionCardImg"  src="../../assets/bruchetta.svg"/>
+                                <CardTitle className="specialSectionCardTitle">Bruchetta</CardTitle>
+                                <Card.Text className="specialSectionCardText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi posuere lacinia est eget pharetra.</Card.Text>
                             </Card>
                         </Col>
                         <Col className="specialSectionCol">
-                            <Card className="specialSectionCard"></Card>
+                            <Card className="specialSectionCard">
+                                <Card.Img  className="specialSectionCardImg"  src="../../assets/bruchetta.svg"/>
+                                <CardTitle className="specialSectionCardTitle">Bruchetta</CardTitle>
+                                <Card.Text className="specialSectionCardText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi posuere lacinia est eget pharetra.</Card.Text>
+                            </Card>
                         </Col>
                         <Col className="specialSectionCol">
-                            <Card className="specialSectionCard"></Card>
+                            <Card className="specialSectionCard">
+                                <Card.Img  className="specialSectionCardImg"  src="../../assets/bruchetta.svg"/>
+                                <CardTitle className="specialSectionCardTitle">Bruchetta</CardTitle>
+                                <Card.Text className="specialSectionCardText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi posuere lacinia est eget pharetra.</Card.Text>
+                            </Card>
                         </Col>
                         <Col className="specialSectionCol">
-                            <Card className="specialSectionCard"></Card>
+                            <Card className="specialSectionCard">
+                                <Card.Img  className="specialSectionCardImg"  src="../../assets/bruchetta.svg"/>
+                                <CardTitle className="specialSectionCardTitle">Bruchetta</CardTitle>
+                                <Card.Text className="specialSectionCardText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi posuere lacinia est eget pharetra.</Card.Text>
+                            </Card>
                         </Col>
                     </Row>
                 </Container>
             </div>
             <div className="reviewSection">
-
+                <Carousel>
+                    <Carousel.Item>
+                        <Carousel.Img Text="First Slide"/>
+                        <Carousel.Caption>
+                            <h3>First Slide Lable</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                </Carousel>
             </div>
             <div className="aboutSection">
 
