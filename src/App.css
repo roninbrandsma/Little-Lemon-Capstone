@@ -47,7 +47,6 @@
   height: auto;
   padding-top: 2vh;
   padding-bottom: 2vh;
-  background-color: #F4CE14;
 }
 
 .specialSectionCol {
@@ -80,5 +79,26 @@
 /* Review Section */
 .reviewSection {
   width: 100vw;
-  height: auto;
+  height: 50vh;
 }
+
+.reviewCont {
+  width: 70vw;
+  height: 50vh;
+}
+
+.carousel {
+  width: 60vw;
+  height: 50vh;
+  margin: auto;
+  align-self: center;
+}
+
+.carouselImg {
+  margin: auto;
+  align-self: center;
+}
+
+
+
+/* About Section */

@@ -1,7 +1,7 @@
 import { Container, Row, Col, Button, Card, CardTitle, Carousel } from "react-bootstrap";
 import "../../assets/restaurant.jpg";
 import "../../assets/bruchetta.svg";
-
+// import Placeholder from 'react-bootstrap/Placeholder';
 
 const HomePage = () => {
     return(
@@ -56,21 +56,36 @@ const HomePage = () => {
                 </Container>
             </div>
             <div className="reviewSection">
-                <Carousel>
-                    <Carousel.Item>
-                        <Carousel.Img Text="First Slide"/>
-                        <Carousel.Caption>
-                            <h3>First Slide Lable</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                </Carousel>
+                <Container className="reviewCont">
+                    <Carousel className="carousel">
+                        <Carousel.Item className="carouselItem">
+                            <img className="carouselImg" src="https://picsum.photos/1152/540" alt=""/>
+                            <Carousel.Caption>
+                                <h3>First Title</h3>
+                                <p>First Text</p>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                    </Carousel>
+                </Container>
             </div>
             <div className="aboutSection">
-
+                <Container className="aboutCont">
+                    <Row>
+                        <Col className="aboutText">
+                            <h2>Place Holder</h2>
+                            <p></p>
+                        </Col>
+                        <Col className="aboutImg">
+                            <img src="https://picsum.photos/300/450" alt=""/>
+                        </Col>
+                        <Col className="aboutImg">
+                            <img src="https://picsum.photos/300/450" alt=""/>
+                        </Col>
+                    </Row>
+                </Container>
             </div>
         </>
     )
 }
 
-export default HomePage
+export default HomePage;
