@@ -3,9 +3,9 @@
 const Footer = () => {
     return(
         <footer>
-            
+
         </footer>
     )
 }
 
- export default Footer;
+ export default Footer
