@@ -7,8 +7,8 @@
 /* HERO SECTION */
 .heroSectionDiv {
   width: 100vw;
-  padding-top: 3vw;
-  padding-bottom: 3vw;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
   padding-left: 2vw;
   padding-right: 2vw;
   display: inline-block;
@@ -19,9 +19,9 @@
 }
 
 .restImage {
-  width: 500px;
-  height: 300px;
-  float: right;
+  /* width: 500px;
+  height: 300px; */
+  float: left;
 }
 
 .heroContInfo {
@@ -56,9 +56,9 @@
 .specialSectionCard {
   width: 13vw;
   height: 35vh !important;
-  background-color: #495E57 !important;
-  color: #F4CE14 !important;
-  text-shadow: 0 0 2px black;
+  background-color: white !important;
+  color: #495E57 !important;
+  box-shadow: 0 0 7px black;
   border-radius: 15%;
 }
 
@@ -79,7 +79,10 @@
 /* Review Section */
 .reviewSection {
   width: 100vw;
-  height: 50vh;
+  height: fit-content;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  background-color: #354540;
 }
 
 .reviewCont {
@@ -88,7 +91,7 @@
 }
 
 .carousel {
-  width: 60vw;
+  width: 50vw;
   height: 50vh;
   margin: auto;
   align-self: center;
@@ -100,5 +103,11 @@
 }
 
 
-
 /* About Section */
+
+.aboutSection {
+  width: 100vw;
+  height: fit-content;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}

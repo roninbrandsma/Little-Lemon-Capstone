@@ -16,7 +16,7 @@ const HomePage = () => {
                             <Button className="reserveBtn" variant="custom" >Reserve a Table</Button>
                         </Col>
                         <Col className="heroContImg">
-                            <img className="restImage" src="../../assets/restaurant.jpg" alt=""/>
+                            <img className="restImage" src="https://picsum.photos/580/350" alt=""/>
                         </Col>
                     </Row>
                 </Container>
@@ -73,7 +73,7 @@ const HomePage = () => {
                     <Row>
                         <Col className="aboutText">
                             <h2>Place Holder</h2>
-                            <p></p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id sapien in nisl congue mollis. In eu velit pulvinar, semper orci in, efficitur tortor. Donec sollicitudin mattis dolor a dictum. Cras quis turpis auctor, tempus arcu non, facilisis purus. Proin id tincidunt enim. Etiam eu elit eget tortor consectetur accumsan vitae eget nulla. Cras convallis convallis egestas.</p>
                         </Col>
                         <Col className="aboutImg">
                             <img src="https://picsum.photos/300/450" alt=""/>
