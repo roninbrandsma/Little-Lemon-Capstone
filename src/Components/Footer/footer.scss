@@ -1,1 +1,56 @@
-@import "../../variables.scss"
+@import "../../variables.scss";
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none !important ;
+    margin: 0;
+    padding: 0;
+}
+
+.footer {
+    width: 100vw;
+    background-color: #060C23;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.footerCol {
+    color: #E8EDEC;
+}
+
+.footerImg {
+    height: 267px;
+    width: 150px;
+    background-color: #E8EDEC;
+    outline: #E8EDEC solid 2px;
+}
+
+.addressList {
+    margin-bottom: 10px;
+}
+
+.contactList {
+    margin-top: 10px;
+}
+
+.footerLink {
+    color: #E8EDEC;
+    font-size: 20px;
+}
+
+.footerLink:hover {
+    color: #f4ce14;
+    text-decoration: underline;
+    transition: 150ms;
+}
+
+.footerContact {
+    margin: 0;
+    font-size: 20px;
+}
+

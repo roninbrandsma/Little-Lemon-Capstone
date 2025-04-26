@@ -1,0 +1,47 @@
+@import "../../variables.scss";
+
+
+.floatingLabel {
+    margin: 10px;
+}
+
+.contactCol {
+    display: grid;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    background-color: #495e57;
+}
+
+.contactFormTitle {
+    justify-self: center;
+    margin-bottom: 20px;
+    color: $yellow;
+}
+
+.contactForm {
+    display: grid;
+    width: 600px;
+    background-color: $yellow;
+    border-radius: 16px;
+}
+
+.contactButton {
+    height: 60px;
+    width: 120px;
+    color: #495e57 !important;
+    background-color: #f4ce14 !important;
+    outline: #495e57 solid 2px;
+    font-size: 18px;
+    font-weight: 400;
+    justify-self: center;
+}
+
+.contactButton:hover {
+    color: #f4ce14 !important;
+    background-color: #495e57 !important;
+    outline: #f4ce14 solid 2px;
+    transform: scale(1.03);
+}

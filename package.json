@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@smastrom/react-rating": "^1.5.0",
     "@testing-library/jest-dom": "^6.4.2",
     "@testing-library/react": "^14.2.2",
     "@testing-library/user-event": "^14.5.2",
@@ -10,7 +11,11 @@
     "little-lemon": "file:",
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.1",
+    "react-calendar": "^5.1.0",
+    "react-datepicker": "^8.3.0",
     "react-dom": "^18.2.0",
+    "react-refresh": "^0.17.0",
+    "react-router-hash-link": "^2.4.3",
     "react-scripts": "^5.0.1",
     "uikit": "^3.19.2",
     "web-vitals": "^3.5.2"
@@ -40,7 +45,7 @@
     ]
   },
   "devDependencies": {
-    "react-router-dom": "^6.22.3",
+    "react-router-dom": "^7.5.2",
     "sass": "^1.72.0"
   }
 }

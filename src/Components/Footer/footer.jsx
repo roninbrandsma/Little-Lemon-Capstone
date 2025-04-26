@@ -1,9 +1,71 @@
+import { Row, Col, Container } from "react-bootstrap"
+import { HashLink } from "react-router-hash-link"
 
+import "../Footer/Footer.scss"
 
 const Footer = () => {
     return(
-        <footer>
-
+        <footer className="footer">
+            <Container fluid>
+                <Row>
+                    <Col className="footerCol">
+                        <img className="footerImg" src={require("../../assets/little-lemon-logo.png")} alt="" />
+                    </Col>
+                    <Col className="footerCol">
+                        <h1>Navigation</h1>
+                        <ul className="footerTitle">
+                            <li>
+                                <a href="/home" className="footerLink">Home</a>
+                            </li>
+                            <li>
+                                <a href="/home" className="footerLink">Menu</a>
+                            </li>
+                            <li>
+                                <a href="/reservations" className="footerLink">Reservations</a>
+                            </li>
+                            <li>
+                                <a href="/contact" className="footerLink">Contact</a>
+                            </li>
+                            <li>
+                                <HashLink to="/home#aboutsection" smooth className="footerLink">About</HashLink>
+                            </li>
+                        </ul>
+                    </Col>
+                    <Col className="footerCol">
+                        <h1 className="footerTitle">Contact</h1>
+                        <ul className="addressList">
+                            <li>
+                                <p className="footerContact">4756 N Lincoln Ave,</p>
+                            </li>
+                            <li>
+                                <p className="footerContact">Chicago,</p>
+                            </li>
+                            <li>
+                                <p className="footerContact">IL 60625</p>
+                            </li>
+                        </ul>
+                        <ul className="contactList">
+                            <li>
+                                <p className="footerContact">littlelemon@gmail.com</p>
+                            </li>
+                            <li>
+                                <p className="footerContact">(773) 756-6559</p>
+                            </li>
+                        </ul>
+                    </Col>
+                    <Col className="footerCol">
+                        <h1 className="footerTitle">Social Media</h1>
+                        <ul>
+                            <li>
+                                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="footerLink">Instagram</a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="footerLink">Facebook</a>
+                            </li>
+                        </ul>
+                    </Col>
+                </Row>
+            </Container>
         </footer>
     )
 }

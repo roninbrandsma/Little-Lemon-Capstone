@@ -4,24 +4,18 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { NavLink } from 'react-router-dom';
 
-import "../../variables.scss";
-import "./header.scss"
+import "./Header.scss"
+import { HashLink } from "react-router-hash-link";
 
 const Header = () => {
     return(
-        <Navbar bg="light" variant="light">
-            <Container>
-                <Navbar.Brand href="/" className="headertext">
-                    <img
-                        src="../../../public/assets/Logo.jpg"
-                        alt=""
-                        height={40}
-                        width={148}
-                    />
-                </Navbar.Brand>
+        <Navbar className="navbar">
+            <Container fluid>
+                <Navbar.Brand href="/home" className="headertext">Little Lemon</Navbar.Brand>
                 <Nav className="navlinks">
-                    <NavLink to="/portfolio" className="headertext headerlink" >Portfolio</NavLink>
-                    <NavLink to="/contact" className="headertext headerlink">Contact</NavLink>
+                    <NavLink to="/reservations" className="headerlink" >Reservations</NavLink>
+                    <NavLink to="/contact" className="headerlink">Contact</NavLink>
+                    <HashLink to="/home#aboutsection" smooth className="headerlink">About</HashLink>
                 </Nav>
             </Container>
         </Navbar>

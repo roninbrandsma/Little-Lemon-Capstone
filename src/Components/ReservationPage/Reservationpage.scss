@@ -1,0 +1,61 @@
+@import "../../variables.scss";
+
+
+.floatingLabel {
+    margin: 10px;
+}
+
+.reserveCol {
+    display: grid;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    background-color: #495e57;
+}
+
+.reserveFormTitle {
+    justify-self: center;
+    margin-bottom: 20px;
+    color: $yellow;
+}
+
+.reserveForm {
+    display: grid;
+    background-color: $yellow;
+    border-radius: 16px;
+}
+
+.reserveNameGroup {
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.formName {
+    width: 290px;
+}
+
+.reserveButtonGroup {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.reserveButton {
+    height: 60px;
+    width: 120px;
+    color: #495e57 !important;
+    background-color: #f4ce14 !important;
+    outline: #495e57 solid 2px;
+    font-size: 18px;
+    font-weight: 400;
+    justify-self: center;
+}
+
+.reserveButton:hover {
+    color: #f4ce14 !important;
+    background-color: #495e57 !important;
+    outline: #f4ce14 solid 2px;
+    transform: scale(1.03);
+}
