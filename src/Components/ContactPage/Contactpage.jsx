@@ -25,11 +25,11 @@ const ContactPage = () => {
                                 <Form.Control as="textarea" placeholder="Name"/>
                             </FloatingLabel>
                             <FloatingLabel className="floatingLabel" controlId="floatingTextarea" label="Email Address">
-                                <Form.Control required type="email" placeholder="Email Address"/>
+                                <Form.Control  type="email" placeholder="Email Address"/>
                                 <Form.Control.Feedback type="invalid">Please enter a valid email address.</Form.Control.Feedback>
                             </FloatingLabel>
                             <FloatingLabel className="floatingLabel" controlId="floatingTextarea2" label="Your Message">
-                                <Form.Control required as="textarea" placeholder="Leave your message here" style={{height: "100px"}}/>
+                                <Form.Control  as="textarea" placeholder="Leave your message here" style={{height: "100px"}}/>
                                 <Form.Control.Feedback type="invalid">Please enter a message.</Form.Control.Feedback>
                             </FloatingLabel>
                         </Form.Group>

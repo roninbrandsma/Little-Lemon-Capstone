@@ -1,48 +1,50 @@
 @import "../../variables.scss";
 
 
-.floatingLabel {
-    margin: 10px;
-}
-
-.reserveCol {
-    display: grid;
+.confirmCont {
+    display: flex;
     justify-content: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
     margin-top: 80px;
     margin-bottom: 80px;
-    background-color: #495e57;
 }
 
-.reserveFormTitle {
-    justify-self: center;
-    margin-bottom: 20px;
-    color: $yellow;
-}
-
-.reserveForm {
-    display: grid;
+.confirmCard {
+    display: flex;
+    width: 500px;
     background-color: $yellow;
     border-radius: 16px;
 }
 
-.reserveNameGroup {
-    display: inline-flex;
-    justify-content: space-between;
+.confirmTitle {
+    width: fit-content;
+    align-self: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 26px;
 }
 
-.formName {
-    width: 290px;
-}
-
-.reserveButtonGroup {
-    display: flex;
-    justify-content: center;
+.confirmText {
+    margin-top: 10px;
     margin-bottom: 10px;
+    align-self: center;
 }
 
-.reserveButton {
+.confirmTextName {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-self: center;
+}
+
+.confirmButtonDiv {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: grid;
+    justify-content: center;
+}
+
+.confirmButton {
+    margin-top: 10px;
+    margin-bottom: 10px;
     height: 60px;
     width: 120px;
     color: #495e57 !important;
@@ -51,7 +53,6 @@
     font-size: 18px;
     font-weight: 400;
     justify-self: center;
-    justify-content: center;
 }
 
 .reserveButton:hover {

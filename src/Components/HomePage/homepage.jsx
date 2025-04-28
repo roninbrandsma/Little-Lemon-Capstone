@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router"
 import { Container, Row, Col, Button, Card, CardTitle} from "react-bootstrap"
 import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
@@ -16,8 +16,8 @@ const HomePage = () => {
                         <Col className="heroContInfo">
                             <h2>Little Lemon</h2>
                             <h5>4756 N Lincoln Ave, Chicago, IL 60625</h5>
-                            <p className="heroPara">Open form 12:00 to 16:00, 15:00 to 22:00 from Tuesday to Sunday. We serve fresh, homely Italian American cuisine that is sure to impress.</p>
-                            <Button onClick={() => navigate("/reservations")} className="reserveBtn" variant="custom" >Reserve a Table</Button>
+                            <p  className="heroPara">Open form 12:00 to 16:00, 15:00 to 22:00 from Tuesday to Sunday. We serve fresh, homely Italian American cuisine that is sure to impress.</p>
+                            <Button aria-label="Reservations" onClick={() => navigate("/reservations")} className="reserveBtn" variant="custom" >Reserve a Table</Button>
                         </Col>
                         <Col className="heroContImg">
                             <img className="restImage" src={require("../../assets/restaurant.jpg")} alt=""/>
@@ -28,7 +28,7 @@ const HomePage = () => {
             <div className="specialSectionDiv">
                 <div className="specialHeadingDiv">
                     <h1 className="specialHeading">Our Weekly Specials</h1>
-                    <Button className="menuBtn" variant="custom">Menu</Button>
+                    <Button aria-label="Menu" className="menuBtn" variant="custom">Menu</Button>
                 </div>
                 <Container className="specialContainer">
                     <Row>

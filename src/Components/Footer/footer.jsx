@@ -1,5 +1,4 @@
 import { Row, Col, Container } from "react-bootstrap"
-import { HashLink } from "react-router-hash-link"
 
 import "../Footer/Footer.scss"
 
@@ -15,19 +14,19 @@ const Footer = () => {
                         <h1>Navigation</h1>
                         <ul className="footerTitle">
                             <li>
-                                <a href="/home" className="footerLink">Home</a>
+                                <a aria-label="Home" href="/" className="footerLink">Home</a>
                             </li>
                             <li>
-                                <a href="/home" className="footerLink">Menu</a>
+                                <a aria-label="Menu" href="/" className="footerLink">Menu</a>
                             </li>
                             <li>
-                                <a href="/reservations" className="footerLink">Reservations</a>
+                                <a aria-label="Reservations" href="/reservations" className="footerLink">Reservations</a>
                             </li>
                             <li>
-                                <a href="/contact" className="footerLink">Contact</a>
+                                <a aria-label="Contact" href="/contact" className="footerLink">Contact</a>
                             </li>
                             <li>
-                                <HashLink to="/home#aboutsection" smooth className="footerLink">About</HashLink>
+                                <a href="#aboutsection" aria-label="About" smooth className="footerLink">About</a>
                             </li>
                         </ul>
                     </Col>
