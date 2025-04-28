@@ -8,7 +8,7 @@ const Footer = () => {
             <Container fluid>
                 <Row>
                     <Col className="footerCol">
-                        <img className="footerImg" src={require("../../assets/little-lemon-logo.png")} alt="" />
+                        <img data-testid="footerImage" className="footerImg" src={require("../../assets/little-lemon-logo.png")} alt="" />
                     </Col>
                     <Col className="footerCol">
                         <h1>Navigation</h1>

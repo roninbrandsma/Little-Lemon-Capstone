@@ -4,62 +4,40 @@ import "./Reservationpage.scss"
 import { useNavigate } from "react-router"
 import { useEffect, useState } from "react";
 import { Button, Col, FloatingLabel, Form, Row } from "react-bootstrap"
-import axios from "axios";
-import moment from "moment";
+import { fetchAPI, submitAPI } from "../../API.js";
 
+export const initialiseTimes = (date) => {
+    return fetchAPI(date)
+}
 
 const Reservation = () => {
     let navigate = useNavigate();
+    const [availableTimes, setAvailableTimes] = useState()
 
     const [validated, setValidated] = useState(false);
     const [error, setError] = useState(false);
-    const [tooManyGuests, setTooManyGuests] = useState(false);
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
         email: '',
-        date: '',
+        date: new Date(),
         time: '',
         numberOfPeople: '',
         occasion: ''
     })
 
     useEffect(() => {
-        if (Number(formData.numberOfPeople) > 10) {
-            setTooManyGuests(true)
-        } else {
-            setTooManyGuests(false)
-        }
-    }, [formData.numberOfPeople])
+        setAvailableTimes(initialiseTimes(formData.date))
+    }, [formData.date])
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        setError(false);
-        const form = event.currentTarget;
-        if (tooManyGuests) {
-            return
-        }
-
-        if (form.checkValidity() === false) {
-            event.preventDefault();
-            event.stopPropagation();
-        } else {
-            handleData().then(data => {
-                navigate("/confirmation")
-            }).catch(err => {
-                setError(true)
-                console.log(err)
-            })
+        if(submitAPI(formData)) {
+            navigate("/confirmation")
         }
         setValidated(true)
     }
 
-    const handleData = async() => {
-        let hours = formData.time.split(':')[0]
-        let minutes = formData.time.split(':')[1]
-        const date = moment(formData.date).add(hours, 'hours').add(minutes, 'minutes').toISOString(true)
-        await axios.post(`${process.env.REACT_APP_API_URL}/reservations`, {...formData, formattedDate: date}, {})
-    }
 
     return (
         <div>
@@ -95,9 +73,10 @@ const Reservation = () => {
                         </Form.Group>
                         <Form.Group className="reserveDateGroup">
                             <FloatingLabel className="floatingLabel" label="Date (Required)">
-                                <Form.Control required aria-required="true"  type="date" min={new Date().toISOString().slice(0, 10)} placeholder="Date" name="dateTime" value={formData.date} onChange={(e) => {setFormData({
+                                <Form.Control required aria-required="true"  type="date" min={new Date().toISOString().slice(0, 10)} placeholder="Date" name="dateTime" value={formData.date.toISOString().slice(0, 10)} onChange={(e) => {setFormData({
                                     ...formData,
-                                    date: e.target.value
+                                    date: new Date(e.target.value),
+                                    time: ''
                                 })}}/>
                                 <Form.Control.Feedback type="invalid">Please enter a date.</Form.Control.Feedback>
                             </FloatingLabel>
@@ -109,15 +88,7 @@ const Reservation = () => {
                                 time: e.target.value
                                 })}}>
                                     <option></option>
-                                    <option>16:00</option>
-                                    <option>16:30</option>
-                                    <option>17:00</option>
-                                    <option>17:30</option>
-                                    <option>18:00</option>
-                                    <option>18:30</option>
-                                    <option>19:00</option>
-                                    <option>19:30</option>
-                                    <option>20:00</option>
+                                    {availableTimes && availableTimes.map(x => {return <option>{x}</option>})}
                                 </Form.Select>
                                 <Form.Control.Feedback type="invalid">Please enter a time.</Form.Control.Feedback>
                             </FloatingLabel>
@@ -129,7 +100,6 @@ const Reservation = () => {
                                     numberOfPeople: e.target.value
                                 })}}/>
                                 <Form.Control.Feedback type="invalid">Please enter how many people are dining with you.</Form.Control.Feedback>
-                                {tooManyGuests && <p style={{color:'red'}}>If more than 10 people, please email us.</p>}
                             </FloatingLabel>
                         </Form.Group>
                         <Form.Group className="reserveOccasion">
