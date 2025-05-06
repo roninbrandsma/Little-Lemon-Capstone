@@ -6,8 +6,8 @@ import Header from "./Components/Header/header";
 import HomePage from './Components/HomePage/homepage';
 import Footer from './Components/Footer/footer';
 import Reservation from './Components/ReservationPage/Reservationpage';
-import ContactPage from './Components/ContactPage/contactpage';
-import Confimation from './Components/ConfimationPage/confirmationpage';
+import ContactPage from './Components/ContactPage/Contactpage';
+import Confimation from './Components/ConfimationPage/Confirmationpage';
 
 function App() {
   return (
