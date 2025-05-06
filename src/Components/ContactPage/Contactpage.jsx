@@ -35,7 +35,7 @@ const ContactPage = () => {
     }
 
     const handleData = async() => {
-        await axios.post(`${process.env.REACT_APP_API_URL}/emails`, {...contactData}, {})
+        await axios.post(`http://localhost:8080/emails`, {...contactData}, {})
     }
 
     return (

@@ -57,7 +57,7 @@ const Reservation = () => {
         let hours = formData.time.split(':')[0]
         let minutes = formData.time.split(':')[1]
         const date = moment(formData.date).add(hours, 'hours').add(minutes, 'minutes').toISOString(true)
-        await axios.post(`${process.env.REACT_APP_API_URL}/reservations`, {...formData, formattedDate: date}, {})
+        await axios.post(`http://localhost:8080/reservations`, {...formData, formattedDate: date}, {})
     }
 
     return (
