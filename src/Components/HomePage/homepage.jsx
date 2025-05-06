@@ -2,7 +2,7 @@ import { useNavigate } from "react-router"
 import { Container, Row, Col, Button, Card, CardTitle} from "react-bootstrap"
 import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
-import "./homepage.scss"
+import "./Homepage.scss"
 // import Placeholder from 'react-bootstrap/Placeholder';
 
 const HomePage = () => {
