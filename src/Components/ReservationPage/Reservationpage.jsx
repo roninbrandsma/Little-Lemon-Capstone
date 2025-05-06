@@ -7,7 +7,6 @@ import { Button, Col, FloatingLabel, Form, Row } from "react-bootstrap"
 import axios from "axios";
 import moment from "moment";
 
-
 const Reservation = () => {
     let navigate = useNavigate();
 
@@ -155,6 +154,5 @@ const Reservation = () => {
         </div>
     )
 }
-
 
 export default Reservation

@@ -1,5 +1,14 @@
 @import "../../variables.scss";
 
+.confirmCol {
+    display: grid;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    background-color: #495e57;
+}
 
 .confirmCont {
     display: flex;
