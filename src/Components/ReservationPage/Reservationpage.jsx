@@ -3,7 +3,7 @@ import "./Reservationpage.scss"
 
 import { useNavigate } from "react-router"
 import { useEffect, useState } from "react";
-import { Button, Col, FloatingLabel, Form, Row } from "react-bootstrap"
+import { Button, Col, Form, Row } from "react-bootstrap"
 import axios from "axios";
 import moment from "moment";
 import { NameComponent } from "./NameComponent";
