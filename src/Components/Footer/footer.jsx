@@ -1,6 +1,6 @@
 import { Row, Col, Container } from "react-bootstrap"
 
-import "../Footer/footer.scss"
+import "../Footer/Footer.scss"
 
 const Footer = () => {
     return(

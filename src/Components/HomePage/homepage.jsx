@@ -1,8 +1,9 @@
 import { useNavigate } from "react-router"
-import { Container, Row, Col, Button, Card, CardTitle} from "react-bootstrap"
-import { Rating } from '@smastrom/react-rating'
+import { Container, Row, Col, Button } from "react-bootstrap"
 import '@smastrom/react-rating/style.css'
 import "./Homepage.scss"
+import { CardComponent } from "./CardComponent"
+import { ReviewComponent } from "./ReviewComponent"
 // import Placeholder from 'react-bootstrap/Placeholder';
 
 const HomePage = () => {
@@ -32,46 +33,10 @@ const HomePage = () => {
                 </div>
                 <Container className="specialContainer">
                     <Row>
-                        <Col className="specialSectionCol">
-                            <Card className="specialSectionCard"  variant="light">
-                                <Card.Img  className="specialSectionCardImg"  src={require("../../assets/Burrata-Bruschetta.jpg")}/>
-                                <div className="specialCardTitleDiv">
-                                    <CardTitle className="specialCardTitle">Bruchetta</CardTitle>
-                                    <CardTitle className="specialCardPrice">$6.30</CardTitle>
-                                </div>
-                                <Card.Text className="specialSectionCardText">Try our bruschetta, made with our housemade sourdough bread, locally produced burrata and oven roasted cherry tomatoes topped with olive oil and balsamic vinegar.</Card.Text>
-                            </Card>
-                        </Col>
-                        <Col className="specialSectionCol">
-                            <Card className="specialSectionCard">
-                                <Card.Img  className="specialSectionCardImg"  src={require("../../assets/Lemon-Ricotta-Cake.webp")}/>
-                                <div className="specialCardTitleDiv">
-                                    <CardTitle className="specialCardTitle">Lemon Ricotta Slice</CardTitle>
-                                    <CardTitle className="specialCardPrice">$7.20</CardTitle>
-                                </div>
-                                <Card.Text className="specialSectionCardText">A slice of our housemade lemon ricotta cake topped with a strawberry and raspberry syrup and fresh fruits.</Card.Text>
-                            </Card>
-                        </Col>
-                        <Col className="specialSectionCol">
-                            <Card className="specialSectionCard">
-                                <Card.Img  className="specialSectionCardImg"  src={require("../../assets/greek salad.jpg")}/>
-                                <div className="specialCardTitleDiv">
-                                    <CardTitle className="specialCardTitle">Greek Salad</CardTitle>
-                                    <CardTitle className="specialCardPrice">$9.00</CardTitle>
-                                </div>
-                                <Card.Text className="specialSectionCardText">Our take on a greek salad, with red onion, green pepper, cherry tomato, olives and feta cheese, coated with our housemade greek dressing.</Card.Text>
-                            </Card>
-                        </Col>
-                        <Col className="specialSectionCol">
-                            <Card className="specialSectionCard">
-                                <Card.Img  className="specialSectionCardImg"  src={require("../../assets/veal-milanese.jpg")}/>
-                                <div className="specialCardTitleDiv">
-                                    <CardTitle className="specialCardTitle">Veal Milanese</CardTitle>
-                                    <CardTitle className="specialCardPrice">$18.00</CardTitle>
-                                </div>
-                                <Card.Text className="specialSectionCardText">Made with locally sourced veal chop, crusted with flour and shallow fryed, served with a tomato and rocket salad.</Card.Text>
-                            </Card>
-                        </Col>
+                        <CardComponent cardImg={require("../../assets/Burrata-Bruschetta.jpg")} itemName={"Bruchetta"} itemPrice={"$6.30"} cardText={"Try our bruschetta, made with our housemade sourdough bread, locally produced burrata and oven roasted cherry tomatoes topped with olive oil and balsamic vinegar."}/>
+                        <CardComponent cardImg={require("../../assets/Lemon-Ricotta-Cake.webp")} itemName={"Lemon Ricotta Slice"} itemPrice={"$7.20"} cardText={"A slice of our housemade lemon ricotta cake topped with a strawberry and raspberry syrup and fresh fruits."}/>
+                        <CardComponent cardImg={require("../../assets/greek salad.jpg")} itemName={"Greek Salad"} itemPrice={"$9.00"} cardText={"Our take on a greek salad, with red onion, green pepper, cherry tomato, olives and feta cheese, coated with our housemade greek dressing."}/>
+                        <CardComponent cardImg={require("../../assets/veal-milanese.jpg")} itemName={"Veal Milanese"} itemPrice={"$18.00"} cardText={"Made with locally sourced veal chop, crusted with flour and shallow fryed, served with a tomato and rocket salad."}/>
                     </Row>
                 </Container>
             </div>
@@ -79,54 +44,10 @@ const HomePage = () => {
                 <h1 className="reviewSectionTitle">Customer Reviews</h1>
                     <Container className="reviewCont">
                         <Row>
-                            <Col className="reviewCol">
-                                <Card className="reviewCard">
-                                    <Container className="userContainer">
-                                        <Card.Img className="reviewUserImage" src={require("../../assets/default-user-image.webp")} />
-                                        <div className="reviewName">
-                                            <Card.Title className="reviewNameTitle">William Andrews</Card.Title>
-                                            <Rating value={4.5} readOnly />
-                                        </div>
-                                    </Container>
-                                    <Card.Body className="review">Decent place. I found the entrees to be very agreeable to my personal flavor-profile. The decor was unique and incredible. I could see myself being a regular here.</Card.Body>
-                                </Card>
-                            </Col>
-                            <Col className="reviewCol">
-                                <Card className="reviewCard">
-                                    <Container className="userContainer">
-                                        <Card.Img className="reviewUserImage" src={require("../../assets/default-user-image.webp")} />
-                                        <div className="reviewName">
-                                            <Card.Title className="reviewNameTitle">Hugo Ruiz</Card.Title>
-                                            <Rating value={4} readOnly />
-                                        </div>
-                                    </Container>
-                                    <Card.Body className="review">This place was nearby and I decided to check it out. Make sure to save room for dessert, because that was the best part of the meal! Everything I tried was bursting with flavor.</Card.Body>
-                                </Card>
-                            </Col>
-                            <Col className="reviewCol">
-                                <Card className="reviewCard">
-                                    <Container className="userContainer">
-                                        <Card.Img className="reviewUserImage" src={require("../../assets/default-user-image.webp")} />
-                                        <div className="reviewName">
-                                            <Card.Title className="reviewNameTitle">Amelia King</Card.Title>
-                                            <Rating value={4} readOnly />
-                                        </div>
-                                    </Container>
-                                    <Card.Body className="review">Decent place. I found the ambiance to be very charming.</Card.Body>
-                                </Card>
-                            </Col>
-                            <Col className="reviewCol">
-                                <Card className="reviewCard">
-                                    <Container className="userContainer">
-                                        <Card.Img className="reviewUserImage" src={require("../../assets/default-user-image.webp")} />
-                                        <div className="reviewName">
-                                            <Card.Title className="reviewNameTitle">Hanson Berry</Card.Title>
-                                            <Rating value={5} readOnly />
-                                        </div>
-                                    </Container>
-                                    <Card.Body className="review">I stumbled on this undiscovered gem right in our neighboorhood. The waiter was prompt and polite. The food is simply to die for. This is definitely a spot I'll be frequenting.</Card.Body>
-                                </Card>
-                            </Col>
+                            <ReviewComponent reviewImg={require("../../assets/default-user-image.webp")} reviewName={"William Andrews"} rating={4.5} review={"Decent place. I found the entrees to be very agreeable to my personal flavor-profile. The decor was unique and incredible. I could see myself being a regular here."} />
+                            <ReviewComponent reviewImg={require("../../assets/default-user-image.webp")} reviewName={"Hugo Ruiz"} rating={4} review={"This place was nearby and I decided to check it out. Make sure to save room for dessert, because that was the best part of the meal! Everything I tried was bursting with flavor."} />
+                            <ReviewComponent reviewImg={require("../../assets/default-user-image.webp")} reviewName={"Amelia King"} rating={4} review={"Decent place. I found the ambiance to be very charming."} />
+                            <ReviewComponent reviewImg={require("../../assets/default-user-image.webp")} reviewName={"Hanson Berry"} rating={5} review={"I stumbled on this undiscovered gem right in our neighboorhood. The waiter was prompt and polite. The food is simply to die for. This is definitely a spot I'll be frequenting."} />
                         </Row>
                     </Container>
             </div>
