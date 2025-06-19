@@ -4,7 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { NavLink } from 'react-router';
 
-import "./Header.scss"
+import "./header.scss"
 
 const Header = () => {
     return(
