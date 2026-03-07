@@ -2,7 +2,6 @@
 
 //  HERO SECTION 
 .heroSectionDiv {
-    height: 502px;
     width: 100vw;
     padding-top: 40px;
     padding-bottom: 40px;
@@ -58,9 +57,13 @@
     transform: scale(1.03);
 }
 
-// SPECIAL SECTION
+// SPECIAL SECTIONs
+
 .specialSectionDiv {
-    display: block;
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    height: fit-content;
     width: 100vw;
     padding-top: 46px;
     padding-bottom: 46px;
@@ -75,7 +78,8 @@
 .specialHeadingDiv {
     display: flex;
     margin-bottom: 30px;
-    width: 1264px;
+    width: 90vw;
+    max-width: 1296px;
     justify-self: center;
     justify-content: space-between;
 }
@@ -106,7 +110,7 @@
 
 .specialSectionCol {
     width: 274px;
-    display: flex;
+    display: inline-flex;
     height: fit-content;
     justify-content: center;
 }
