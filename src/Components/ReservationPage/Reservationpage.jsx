@@ -1,7 +1,7 @@
 import 'react-datepicker/dist/react-datepicker.css';
 import './Reservationpage.scss';
 
-import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { Button, Col, Form, Row } from 'react-bootstrap';
 import axios from 'axios';
@@ -61,11 +61,13 @@ const Reservation = () => {
     setValidated(true);
   };
 
+  const API_URL = process.env.REACT_APP_API_URL;
+
   const handleData = async () => {
     let hours = formData.time.split(':')[0];
     let minutes = formData.time.split(':')[1];
     const date = moment(formData.date).add(hours, 'hours').add(minutes, 'minutes').toISOString(true);
-    await axios.post(`http://54.76.164.185:8080/reservations`, { ...formData, formattedDate: date }, {});
+    await axios.post(`${API_URL}/reservations`, { ...formData, formattedDate: date }, {});
   };
 
   return (
