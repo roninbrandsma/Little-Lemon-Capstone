@@ -35,7 +35,7 @@ const ContactPage = () => {
   };
 
   const handleData = async () => {
-    await axios.post('/emails', { ...contactData }, {});
+    await axios.post('/api/emails', { ...contactData }, {});
   };
 
   return (

@@ -65,7 +65,7 @@ const Reservation = () => {
     let hours = formData.time.split(':')[0];
     let minutes = formData.time.split(':')[1];
     const date = moment(formData.date).add(hours, 'hours').add(minutes, 'minutes').toISOString(true);
-    await axios.post('/reservations', { ...formData, formattedDate: date }, {});
+    await axios.post('/api/reservations', { ...formData, formattedDate: date }, {});
   };
 
   return (
