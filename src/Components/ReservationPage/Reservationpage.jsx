@@ -61,13 +61,11 @@ const Reservation = () => {
     setValidated(true);
   };
 
-  const API_URL = process.env.REACT_APP_API_URL;
-
   const handleData = async () => {
     let hours = formData.time.split(':')[0];
     let minutes = formData.time.split(':')[1];
     const date = moment(formData.date).add(hours, 'hours').add(minutes, 'minutes').toISOString(true);
-    await axios.post(`${API_URL}/reservations`, { ...formData, formattedDate: date }, {});
+    await axios.post('/reservations', { ...formData, formattedDate: date }, {});
   };
 
   return (

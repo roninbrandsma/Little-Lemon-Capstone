@@ -34,10 +34,8 @@ const ContactPage = () => {
     console.log(contactData);
   };
 
-  const API_URL = process.env.REACT_APP_API_URL;
-
   const handleData = async () => {
-    await axios.post(`${API_URL}/emails`, { ...contactData }, {});
+    await axios.post('/emails', { ...contactData }, {});
   };
 
   return (
